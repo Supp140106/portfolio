@@ -1,6 +1,8 @@
 import * as THREE from 'three';
-import { useRef, useState, useEffect, memo, ReactNode } from 'react';
-import { Canvas, createPortal, useFrame, useThree, ThreeElements } from '@react-three/fiber';
+import { useRef, useState, useEffect, memo } from 'react';
+import type { ReactNode } from 'react'; // ✅ type-only import
+import { Canvas, createPortal, useFrame, useThree } from '@react-three/fiber';
+import type { ThreeElements } from '@react-three/fiber'
 import {
   useFBO,
   useGLTF,
@@ -13,6 +15,7 @@ import {
   Text
 } from '@react-three/drei';
 import { easing } from 'maath';
+
 
 type Mode = 'lens' | 'bar' | 'cube';
 

@@ -7,8 +7,8 @@ import {
   useRef,
   useState,
 } from "react"
-import { motion, MotionProps, useInView } from "framer-motion"
-
+import { motion, useInView } from "framer-motion"
+import type { MotionProps} from "framer-motion"
 import { cn } from "@/lib/utils"
 
 interface SequenceContextValue {
