@@ -11,7 +11,7 @@ const skills = [
   { name: "TypeScript", level: 85 },
   { name: "Node.js", level: 80 },
   { name: "Next.js", level: 85 },
-  { name: "GSAP", level: 75 },
+  { name: "Python", level: 95 },
   { name: "Tailwind CSS", level: 95 },
   { name: "PostgreSQL", level: 70 },
   { name: "Docker", level: 65 },
@@ -149,6 +149,7 @@ export default function Hero() {
 
   return (
     <section
+      id="about"
       ref={sectionRef}
       className="relative h-[300vh] w-full bg-[#14031f]"
     >

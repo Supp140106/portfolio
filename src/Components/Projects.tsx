@@ -1,7 +1,7 @@
 import { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ExternalLink, Box, Waves } from "lucide-react";
+import { Box, Waves } from "lucide-react";
 import NotificationCard from "./NotificationCard";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -43,7 +43,7 @@ export default function Projects() {
   useLayoutEffect(() => {
     const track = trackRef.current;
     const section = sectionRef.current;
-    
+
     if (!track || !section) return;
 
     // Force a refresh to get accurate measurements
@@ -68,7 +68,7 @@ export default function Projects() {
           invalidateOnRefresh: true,
           anticipatePin: 1,
           markers: false, // Set to true for debugging
-          onUpdate: (self) => {
+          onUpdate: () => {
             // Optional: log progress for debugging
             // console.log("Progress:", self.progress);
           },
@@ -101,6 +101,7 @@ export default function Projects() {
 
   return (
     <section
+      id="projects"
       ref={sectionRef}
       className="relative bg-[#0f0f12] overflow-hidden"
       style={{ minHeight: "100vh" }}
@@ -136,7 +137,7 @@ export default function Projects() {
         </div>
 
         {/* Project Cards with NotificationCard */}
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div
             key={project.title}
             className="shrink-0 flex items-center justify-center"
@@ -151,7 +152,7 @@ export default function Projects() {
                 websiteUrl={project.links.demo}
                 primaryAction="Visit Website"
                 secondaryAction="View Details"
-                illustration={index % 2 === 0 ? "purple" : "green"}
+                //illustration={index % 2 === 0 ? "purple" : "green"}
                 onSecondaryClick={() => console.log(`View details: ${project.title}`)}
               />
             </div>

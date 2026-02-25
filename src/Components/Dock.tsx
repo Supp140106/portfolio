@@ -3,12 +3,10 @@ import { useRef } from "react";
 import {
 
     User,
-    Briefcase,
     Code,
     Mail,
     Github,
     Linkedin,
-    Twitter
 } from "lucide-react";
 
 interface DockIconProps {
@@ -77,20 +75,27 @@ export default function Dock({ className }: DockProps) {
             label: "About",
             onClick: () => window.scrollTo({ top: 0, behavior: "smooth" })
         },
-        {
-            icon: <Briefcase size={24} />,
-            label: "About Me", // Updated label to match behavior requested by user ("briefcase goes to about")
-            onClick: () => scrollToSection("about")
-        },
+
         {
             icon: <Code size={24} />,
             label: "Projects",
             onClick: () => scrollToSection("projects")
         },
-        { icon: <Mail size={24} />, label: "Contact" },
-        { icon: <Github size={24} />, label: "GitHub" },
-        { icon: <Linkedin size={24} />, label: "LinkedIn" },
-        { icon: <Twitter size={24} />, label: "Twitter" },
+        {
+            icon: <Mail size={24} />,
+            label: "Contact",
+            onClick: () => scrollToSection("contact")
+        },
+        {
+            icon: <Github size={24} />,
+            label: "GitHub",
+            onClick: () => window.open("https://github.com/Supp140106", "_blank")
+        },
+        {
+            icon: <Linkedin size={24} />,
+            label: "LinkedIn",
+            onClick: () => window.open("https://www.linkedin.com/in/supprit-das-b3a051312/", "_blank")
+        },
     ];
 
     return (
