@@ -72,8 +72,8 @@ export default function Contact() {
               Contact
             </motion.p>
             <h2 className="text-7xl md:text-8xl font-medium text-white tracking-tighter leading-[0.9]">
-              Let's start a <br />
-              <span className="text-purple-200/40">conversation.</span>
+              Let's <span className="text-purple-400 italic lavish">Start</span> a <br />
+              <span className="text-purple-300 italic">conversation.</span>
             </h2>
           </div>
 
