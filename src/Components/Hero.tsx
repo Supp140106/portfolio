@@ -201,7 +201,7 @@ export default function Hero() {
             >
               About{" "}
               <span className="lavish normal-case text-6xl italic tracking-normal">
-                Supprit
+                Supprit Das
               </span>
             </span>
 
