@@ -5,8 +5,8 @@ import {
     User,
     Code,
     Mail,
-    Github,
-    Linkedin,
+    GitBranch,
+    Briefcase,
 } from "lucide-react";
 
 interface DockIconProps {
@@ -87,12 +87,12 @@ export default function Dock({ className }: DockProps) {
             onClick: () => scrollToSection("contact")
         },
         {
-            icon: <Github size={24} />,
+            icon: <GitBranch size={24} />,
             label: "GitHub",
             onClick: () => window.open("https://github.com/Supp140106", "_blank")
         },
         {
-            icon: <Linkedin size={24} />,
+            icon: <Briefcase size={24} />,
             label: "LinkedIn",
             onClick: () => window.open("https://www.linkedin.com/in/supprit-das-b3a051312/", "_blank")
         },
